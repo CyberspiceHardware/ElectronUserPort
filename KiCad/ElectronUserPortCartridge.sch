@@ -1,0 +1,174 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 4
+Title "Electron User Port Cartridge"
+Date "2022-02-04"
+Rev "1"
+Comp "Cyberspice"
+Comment1 "(c) Cyberspice 2022"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 6450 3600 1500 1400
+U 62111C1E
+F0 "Power" 50
+F1 "Power.sch" 50
+F2 "5V" I L 6450 4700 50 
+F3 "GND" I L 6450 4850 50 
+$EndSheet
+$Sheet
+S 3500 3550 1450 1450
+U 62276BBB
+F0 "ClocksAndSignals" 50
+F1 "ClocksAndSignals.sch" 50
+F2 "RW" I R 4950 3650 50 
+F3 "PHI0" I R 4950 3800 50 
+F4 "NPGFC" I R 4950 3950 50 
+F5 "1Mhz" O R 4950 4250 50 
+F6 "16Mhz" I R 4950 4400 50 
+F7 "5V" I R 4950 4700 50 
+F8 "GND" I R 4950 4850 50 
+F9 "NWE" O L 3500 3650 50 
+F10 "NRE" O L 3500 3800 50 
+F11 "CNPGFC" O R 4950 4100 50 
+F12 "PHI2" O L 3500 3950 50 
+$EndSheet
+Wire Wire Line
+	4850 1650 4150 1650
+Wire Wire Line
+	4150 3300 5050 3300
+Wire Wire Line
+	5050 3300 5050 3650
+Wire Wire Line
+	5050 3650 4950 3650
+Wire Wire Line
+	4950 3800 5150 3800
+Wire Wire Line
+	5150 3800 5150 3200
+Wire Wire Line
+	5150 3200 4250 3200
+Wire Wire Line
+	4250 1800 4850 1800
+Wire Wire Line
+	4850 1950 4350 1950
+Wire Wire Line
+	4350 3100 5250 3100
+Wire Wire Line
+	5250 3100 5250 3950
+Wire Wire Line
+	5250 3950 4950 3950
+Wire Wire Line
+	4950 4100 5350 4100
+Wire Wire Line
+	5350 4100 5350 3000
+Wire Wire Line
+	5350 3000 4450 3000
+Wire Wire Line
+	4450 2100 4850 2100
+Wire Wire Line
+	4850 2250 4550 2250
+Wire Wire Line
+	5450 2900 5450 4250
+Wire Wire Line
+	5450 4250 4950 4250
+Wire Wire Line
+	4550 2900 5450 2900
+Wire Wire Line
+	4150 1650 4150 3300
+Wire Wire Line
+	4250 1800 4250 3200
+Wire Wire Line
+	4350 1950 4350 3100
+Wire Wire Line
+	4450 2100 4450 3000
+Wire Wire Line
+	4550 2250 4550 2900
+Wire Wire Line
+	4850 2400 4650 2400
+Wire Wire Line
+	4650 2400 4650 2800
+Wire Wire Line
+	4650 2800 5550 2800
+Wire Wire Line
+	5550 2800 5550 4400
+Wire Wire Line
+	5550 4400 4950 4400
+Wire Wire Line
+	4950 4700 5950 4700
+Wire Wire Line
+	4950 4850 5800 4850
+Wire Wire Line
+	6450 2450 6650 2450
+Wire Wire Line
+	6650 2450 6650 3050
+Wire Wire Line
+	6650 3050 5800 3050
+Wire Wire Line
+	5800 3050 5800 4850
+Connection ~ 5800 4850
+Wire Wire Line
+	5800 4850 6450 4850
+Wire Wire Line
+	6450 2300 6800 2300
+Wire Wire Line
+	6800 2300 6800 3200
+Wire Wire Line
+	6800 3200 5950 3200
+Wire Wire Line
+	5950 3200 5950 4700
+Connection ~ 5950 4700
+Wire Wire Line
+	5950 4700 6450 4700
+Wire Wire Line
+	6450 1650 6650 1650
+Wire Wire Line
+	6650 1650 6650 1400
+Wire Wire Line
+	6650 1400 3300 1400
+Wire Wire Line
+	3300 1400 3300 3650
+Wire Wire Line
+	3300 3650 3500 3650
+Wire Wire Line
+	6450 1800 6800 1800
+Wire Wire Line
+	6800 1800 6800 1250
+Wire Wire Line
+	6800 1250 3150 1250
+Wire Wire Line
+	3150 1250 3150 3800
+Wire Wire Line
+	3150 3800 3500 3800
+$Sheet
+S 4850 1550 1600 1100
+U 62306156
+F0 "RAMandIO" 50
+F1 "RAMandIO.sch" 50
+F2 "RW" O L 4850 1650 50 
+F3 "PHI0" O L 4850 1800 50 
+F4 "NPGFC" O L 4850 1950 50 
+F5 "1Mhz" I L 4850 2250 50 
+F6 "16MHz" O L 4850 2400 50 
+F7 "5V" O R 6450 2300 50 
+F8 "GND" O R 6450 2450 50 
+F9 "NWE" I R 6450 1650 50 
+F10 "NRE" I R 6450 1800 50 
+F11 "CNPGFC" I L 4850 2100 50 
+F12 "PHI2" I R 6450 1950 50 
+$EndSheet
+Wire Wire Line
+	6450 1950 6950 1950
+Wire Wire Line
+	6950 1950 6950 1100
+Wire Wire Line
+	6950 1100 3000 1100
+Wire Wire Line
+	3000 1100 3000 3950
+Wire Wire Line
+	3000 3950 3500 3950
+$EndSCHEMATC
