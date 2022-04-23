@@ -3,12 +3,12 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Sheet 3 4
+Title "Electron User Port Cartridge - Memory and IO"
+Date "2022-04-08"
+Rev "A2"
+Comp "Cyberspice"
+Comment1 "(c) Cyberspice 2022"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -545,7 +545,7 @@ AR Path="/6233E7DA" Ref="R?"  Part="1"
 AR Path="/62306156/6233E7DA" Ref="R2"  Part="1" 
 F 0 "R2" H 3500 3450 50  0000 L CNN
 F 1 "4K7" H 3450 3350 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 3650 3400 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 3650 3400 50  0001 C CNN
 F 3 "~" H 3650 3400 50  0001 C CNN
 	1    3650 3400
 	1    0    0    -1  
@@ -886,24 +886,6 @@ Text HLabel 1650 4100 0    50   Output ~ 0
 NPGFC
 Text HLabel 1650 4400 0    50   Output ~ 0
 16MHz
-Wire Wire Line
-	8600 5400 8600 5250
-Wire Wire Line
-	8600 2050 8600 2150
-Wire Wire Line
-	8600 2150 8800 2150
-Connection ~ 8600 2150
-Wire Wire Line
-	8600 2150 8600 2300
-Wire Wire Line
-	8600 5250 8850 5250
-Connection ~ 8600 5250
-Wire Wire Line
-	8600 5250 8600 5200
-Text HLabel 8800 2150 2    50   Output ~ 0
-5V
-Text HLabel 8850 5250 2    50   Output ~ 0
-GND
 Text HLabel 3250 3550 0    50   Input ~ 0
 NWE
 Text HLabel 4050 4450 0    50   Input ~ 0
@@ -1113,6 +1095,13 @@ Wire Wire Line
 	10700 4450 10700 4550
 Wire Wire Line
 	10400 4550 10700 4550
+Connection ~ 10700 4550
+Wire Wire Line
+	10700 4550 10700 5200
+Wire Wire Line
+	8600 2050 8600 2300
+Wire Wire Line
+	8600 5200 8600 5400
 Wire Wire Line
 	2250 3000 2800 3000
 Wire Bus Line
@@ -1131,7 +1120,4 @@ Wire Bus Line
 	2700 1900 2700 4400
 Wire Bus Line
 	3850 1900 3850 3850
-Connection ~ 10700 4550
-Wire Wire Line
-	10700 4550 10700 5200
 $EndSCHEMATC

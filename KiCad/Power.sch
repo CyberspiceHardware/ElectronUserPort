@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 4
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "Electron User Port Cartridge - Power "
+Date "2022-04-08"
+Rev "A2"
+Comp "Cyberspice"
+Comment1 "(c) Cyberspice 2022"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -62,10 +62,10 @@ F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 4200 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TTL_74xx:74HCT00 U4
+L TTL_74xx:74HCT00 U3
 U 5 1 6214E1A4
 P 5000 3850
-F 0 "U4" H 5230 3896 50  0000 L CNN
+F 0 "U3" H 5230 3896 50  0000 L CNN
 F 1 "74HCT00" H 5230 3805 50  0000 L CNN
 F 2 "" H 5000 3850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 5000 3850 50  0001 C CNN
@@ -149,22 +149,9 @@ $EndComp
 $Comp
 L Device:C C?
 U 1 1 6218C724
-P 4150 2200
-AR Path="/6218C724" Ref="C?"  Part="1" 
-AR Path="/62111C1E/6218C724" Ref="C3"  Part="1" 
-F 0 "C3" H 4265 2246 50  0000 L CNN
-F 1 "100nF" H 4265 2155 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D7.5mm_W2.5mm_P5.00mm" H 4188 2050 50  0001 C CNN
-F 3 "~" H 4150 2200 50  0001 C CNN
-	1    4150 2200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 6218C72A
 P 4650 2200
-AR Path="/6218C72A" Ref="C?"  Part="1" 
-AR Path="/62111C1E/6218C72A" Ref="C4"  Part="1" 
+AR Path="/6218C724" Ref="C?"  Part="1" 
+AR Path="/62111C1E/6218C724" Ref="C4"  Part="1" 
 F 0 "C4" H 4765 2246 50  0000 L CNN
 F 1 "100nF" H 4765 2155 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D7.5mm_W2.5mm_P5.00mm" H 4688 2050 50  0001 C CNN
@@ -172,36 +159,39 @@ F 3 "~" H 4650 2200 50  0001 C CNN
 	1    4650 2200
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C C?
+U 1 1 6218C72A
+P 4150 2200
+AR Path="/6218C72A" Ref="C?"  Part="1" 
+AR Path="/62111C1E/6218C72A" Ref="C3"  Part="1" 
+F 0 "C3" H 4265 2246 50  0000 L CNN
+F 1 "100nF" H 4265 2155 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.5mm_W2.5mm_P5.00mm" H 4188 2050 50  0001 C CNN
+F 3 "~" H 4150 2200 50  0001 C CNN
+	1    4150 2200
+	1    0    0    -1  
+$EndComp
 Connection ~ 3150 2500
 Wire Wire Line
-	4650 2350 4650 2500
-Wire Wire Line
 	4150 2350 4150 2500
-Connection ~ 4150 2500
 Wire Wire Line
-	4150 2500 4650 2500
+	4650 2350 4650 2500
 Wire Wire Line
 	3650 2350 3650 2500
 Wire Wire Line
 	3150 2500 3650 2500
 Connection ~ 3650 2500
 Wire Wire Line
-	3650 2500 4150 2500
-Wire Wire Line
 	3150 1900 3650 1900
 Connection ~ 3150 1900
 Wire Wire Line
-	4650 2050 4650 1900
-Connection ~ 4150 1900
+	4150 2050 4150 1900
 Wire Wire Line
-	4150 1900 4650 1900
-Wire Wire Line
-	4150 1900 4150 2050
+	4650 1900 4650 2050
 Wire Wire Line
 	3650 2050 3650 1900
 Connection ~ 3650 1900
-Wire Wire Line
-	3650 1900 4150 1900
 Wire Wire Line
 	7650 2950 7550 2950
 Wire Wire Line
@@ -224,16 +214,6 @@ F 3 "" H 7550 4750 50  0001 C CNN
 $EndComp
 Text Notes 8550 3750 0    50   ~ 0
 Not used
-Text HLabel 2800 1900 0    50   Input ~ 0
-5V
-Text HLabel 2800 2500 0    50   Input ~ 0
-GND
-Wire Wire Line
-	2800 2500 3000 2500
-Wire Wire Line
-	2800 1900 3000 1900
-Connection ~ 3000 1900
-Connection ~ 3000 2500
 $Comp
 L TTL_74xx:74LS08 U1
 U 5 1 625CEDA4
@@ -325,11 +305,7 @@ $EndComp
 Wire Wire Line
 	5150 2350 5150 2500
 Wire Wire Line
-	4650 2500 5150 2500
-Wire Wire Line
 	5150 2050 5150 1900
-Wire Wire Line
-	4650 1900 5150 1900
 $Comp
 L Device:C C?
 U 1 1 621B1DEE
@@ -351,8 +327,6 @@ Wire Wire Line
 	5650 2050 5650 1900
 Wire Wire Line
 	5150 1900 5650 1900
-Connection ~ 4650 1900
-Connection ~ 4650 2500
 Connection ~ 5150 1900
 Connection ~ 5150 2500
 $Comp
@@ -421,4 +395,20 @@ Wire Wire Line
 Connection ~ 7550 2450
 Wire Wire Line
 	7550 2450 7550 2950
+Connection ~ 4650 1900
+Wire Wire Line
+	4650 1900 5150 1900
+Connection ~ 4650 2500
+Wire Wire Line
+	4650 2500 5150 2500
+Wire Wire Line
+	3650 2500 4150 2500
+Wire Wire Line
+	3650 1900 4150 1900
+Connection ~ 4150 1900
+Wire Wire Line
+	4150 1900 4650 1900
+Connection ~ 4150 2500
+Wire Wire Line
+	4150 2500 4650 2500
 $EndSCHEMATC

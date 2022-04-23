@@ -3,12 +3,12 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Sheet 4 4
+Title "Electron User Port Cartridge - Clock and decode logic"
+Date "2022-04-08"
+Rev "A2"
+Comp "Cyberspice"
+Comment1 "(c) Cyberspice"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -83,8 +83,8 @@ L TTL_74xx:74LS93 U?
 U 1 1 622CD4D1
 P 7100 3450
 AR Path="/622CD4D1" Ref="U?"  Part="1" 
-AR Path="/62276BBB/622CD4D1" Ref="U3"  Part="1" 
-F 0 "U3" H 6800 4050 50  0000 C CNN
+AR Path="/62276BBB/622CD4D1" Ref="U4"  Part="1" 
+F 0 "U4" H 6800 4050 50  0000 C CNN
 F 1 "74HCT93" H 6800 3950 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7100 3450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS93" H 7100 3450 50  0001 C CNN
@@ -110,8 +110,8 @@ L TTL_74xx:74HCT00 U?
 U 1 1 622CD4DF
 P 8300 4350
 AR Path="/622CD4DF" Ref="U?"  Part="1" 
-AR Path="/62276BBB/622CD4DF" Ref="U4"  Part="1" 
-F 0 "U4" H 8250 4000 50  0000 C CNN
+AR Path="/62276BBB/622CD4DF" Ref="U3"  Part="1" 
+F 0 "U3" H 8250 4000 50  0000 C CNN
 F 1 "74HCT00" H 8250 4100 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8300 4350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 8300 4350 50  0001 C CNN
@@ -148,8 +148,8 @@ L TTL_74xx:74HCT00 U?
 U 2 1 622CD4F3
 P 9050 4250
 AR Path="/622CD4F3" Ref="U?"  Part="2" 
-AR Path="/62276BBB/622CD4F3" Ref="U4"  Part="2" 
-F 0 "U4" H 9050 4575 50  0000 C CNN
+AR Path="/62276BBB/622CD4F3" Ref="U3"  Part="2" 
+F 0 "U3" H 9050 4575 50  0000 C CNN
 F 1 "74HCT00" H 9050 4484 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9050 4250 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 9050 4250 50  0001 C CNN
@@ -214,8 +214,8 @@ U 2 1 622CD51F
 P 5550 4350
 AR Path="/622CD51F" Ref="U?"  Part="2" 
 AR Path="/62276BBB/622CD51F" Ref="U2"  Part="2" 
-F 0 "U2" H 5550 4675 50  0000 C CNN
-F 1 "74HCT02" H 5550 4584 50  0000 C CNN
+F 0 "U2" H 5550 4050 50  0000 C CNN
+F 1 "74HCT02" H 5550 4150 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5550 4350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 5550 4350 50  0001 C CNN
 	2    5550 4350
@@ -292,20 +292,6 @@ Text HLabel 10250 3950 2    50   Input ~ 0
 1Mhz
 Text HLabel 6200 3250 0    50   Input ~ 0
 16Mhz
-Wire Wire Line
-	7100 3950 7100 4600
-Wire Wire Line
-	7100 2950 7300 2950
-Connection ~ 7100 2950
-Wire Wire Line
-	7100 4600 7300 4600
-Connection ~ 7100 4600
-Wire Wire Line
-	7100 4600 7100 4850
-Text HLabel 7300 2950 2    50   Input ~ 0
-5V
-Text HLabel 7300 4600 2    50   Input ~ 0
-GND
 $Comp
 L TTL_74xx:74LS08 U1
 U 1 1 62506DE5
@@ -340,7 +326,7 @@ U 1 1 6255BDCA
 P 2250 2250
 F 0 "R1" V 2043 2250 50  0000 C CNN
 F 1 "220" V 2134 2250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2180 2250 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2180 2250 50  0001 C CNN
 F 3 "~" H 2250 2250 50  0001 C CNN
 	1    2250 2250
 	0    1    1    0   
@@ -385,8 +371,6 @@ Wire Wire Line
 	1400 2150 1350 2150
 Wire Wire Line
 	1350 2350 1400 2350
-Wire Wire Line
-	3300 2250 3400 2250
 $Comp
 L Device:R L1
 U 1 1 625B6446
@@ -408,16 +392,8 @@ Wire Wire Line
 Wire Wire Line
 	1350 1750 1350 2150
 Connection ~ 1350 2150
-Text Notes 1450 1450 0    50   ~ 0
-Either fit L1  for Master or fit U5, R1 and C1
-Text Notes 3500 1950 0    50   ~ 0
-The Electron clock is Ø0 which is the clock\nin to the 6502 CPU not the clock out of the\n6502 CPU. Ø2 is usually a little behind Ø2\nso we delay Ø0 to be more like Ø2.
-Text Notes 3100 2550 0    50   ~ 0
-Time constant T = 4.84 x 10-8
 Wire Wire Line
 	2100 3850 2100 4500
-Wire Wire Line
-	4300 3850 4400 3850
 Connection ~ 4400 3850
 Wire Wire Line
 	1350 2350 1350 4500
@@ -432,8 +408,8 @@ Wire Wire Line
 Connection ~ 1350 2250
 Wire Wire Line
 	1350 2250 1350 2350
-Text Notes 6200 2400 0    50   ~ 0
-When IO space is selected the CPU clock\nslows to 1Mhz but otherwise the CPU\nclock runs at 2Mhz. If we used the clock\ndirectly the timers on the 6522 would be\nodd. So derive a 1Mhz clock when memory\nrather than IO is selected.
+Text Notes 6300 2450 0    50   ~ 0
+When IO space is selected the CPU clock\nslows to 1Mhz but otherwise the CPU\nclock runs at 2Mhz. If we used the clock\ndirectly the timers on the 6522 would be\ninaccurate. So derive a 1Mhz clock when\nmemory rather than IO is selected.
 Text HLabel 2900 3750 2    50   Input ~ 0
 NWE
 Text HLabel 2900 4400 2    50   Input ~ 0
@@ -446,15 +422,11 @@ Text HLabel 6400 4700 2    50   Input ~ 0
 CNPGFC
 Wire Wire Line
 	6300 4700 6400 4700
-Text HLabel 3400 2250 2    50   Input ~ 0
-PHI2
-Text HLabel 4300 3850 0    50   Input ~ 0
-PHI2
 $Comp
-L TTL_74xx:74HCT00 U4
+L TTL_74xx:74HCT00 U3
 U 4 1 622649CC
 P 9050 3650
-F 0 "U4" H 9050 3975 50  0000 C CNN
+F 0 "U3" H 9050 3975 50  0000 C CNN
 F 1 "74HCT00" H 9050 3884 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9050 3650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 9050 3650 50  0001 C CNN
@@ -466,8 +438,8 @@ L TTL_74xx:74HCT00 U?
 U 3 1 622CD513
 P 9850 3950
 AR Path="/622CD513" Ref="U?"  Part="3" 
-AR Path="/62276BBB/622CD513" Ref="U4"  Part="3" 
-F 0 "U4" H 9850 4275 50  0000 C CNN
+AR Path="/62276BBB/622CD513" Ref="U3"  Part="3" 
+F 0 "U3" H 9850 4275 50  0000 C CNN
 F 1 "74HCT00" H 9850 4184 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9850 3950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 9850 3950 50  0001 C CNN
@@ -488,4 +460,14 @@ Wire Wire Line
 Connection ~ 8700 4350
 Wire Wire Line
 	8700 4350 8700 4000
+Wire Wire Line
+	7100 3950 7100 4850
+Wire Wire Line
+	4000 2250 4000 3850
+Wire Wire Line
+	3300 2250 4000 2250
+Wire Wire Line
+	4000 3850 4400 3850
+Text Notes 1350 1400 0    50   ~ 0
+Do not fit IC1, R1 or C9 unless you have clock issues.\nThis circuit delays the clock by a few nS as the \nclock is provided from PHI0 and not PHI2. However\nin testing it is not needed. FIT L1.
 $EndSCHEMATC
